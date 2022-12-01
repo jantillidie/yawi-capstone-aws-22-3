@@ -4,9 +4,9 @@ terraform {
   # to switch from local to remote backend:
 
   backend "s3" {
-    bucket = "yawi-tfstate-bucket-aws223-758393"
-    key    = "terraform.tfstate"
-    region = "us-west-2"
+    bucket         = "yawi-tfstate-bucket-aws223-3248798"
+    key            = "terraform.tfstate"
+    region         = "us-west-2"
     dynamodb_table = "terraform-state-locking"
     encrypt        = true
   }

@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "terraform_state" {
-  bucket        = "yawi-tfstate-bucket-aws223-758393"
+  bucket        = "yawi-tfstate-bucket-aws223-3248798"
   force_destroy = true
 }
 
