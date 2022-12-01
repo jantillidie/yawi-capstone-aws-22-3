@@ -7,7 +7,7 @@ resource "aws_launch_template" "whoogle_instance" {
 }
 
 resource "aws_autoscaling_group" "whoogleasg" {
-  vpc_zone_identifier = [aws_subnet.public_subnet_1.id, aws_subnet.public_subnet_2.id]
+  vpc_zone_identifier = [aws_subnet.private_subnet_1.id, aws_subnet.private_subnet_2.id]
   max_size            = 3
   min_size            = 1
   desired_capacity    = 2
