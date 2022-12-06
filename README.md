@@ -16,6 +16,11 @@ This is the infrastructure for a Whoogle Search Instance to learn autoscaling an
 - Terraform
 - AWS
   - VPC
-  - Loadbalancing
+  - Aplication Loadbalancing
+  - ECS Fargate
 - Stress Tests
   - [cypress](https://www.cypress.io/)
+
+  #### Infrastructure 2022-12-06
+
+  ![inrastucture](pics/refactor-to-ecs.png)
