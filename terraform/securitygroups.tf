@@ -1,3 +1,6 @@
+#====================================================
+# Security Group Inbound and Outbound
+#====================================================
 module "whoogle_sg" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "4.16.2"
@@ -11,6 +14,9 @@ module "whoogle_sg" {
   egress_cidr_blocks  = ["0.0.0.0/0"]
 }
 
+#====================================================
+# Security Group Inbound to Container Port 5000
+#====================================================
 resource "aws_security_group" "ingress_api" {
   name        = "ingress-api"
   description = "Allow ingress to API"
