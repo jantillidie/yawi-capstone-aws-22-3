@@ -18,9 +18,16 @@ This is the infrastructure for a Whoogle Search Instance to learn autoscaling an
   - VPC
   - Aplication Loadbalancing
   - ECS Fargate
+  - Route 53
+  - AWS Certificate Manager
 - Stress Tests
   - [cypress](https://www.cypress.io/)
 
-  #### Infrastructure 2022-12-06
 
-  ![inrastucture](pics/refactor-to-ecs.png)
+#### Infrastructure 2022-12-06
+
+![inrastucture](pics/refactor-to-ecs.png)
+
+##### Result:
+
+![whooglebrowser](pics/whoogle-browser.png)

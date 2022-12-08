@@ -1,15 +1,20 @@
+#====================================================
+# ECS Cluster
+#====================================================
 resource "aws_ecs_cluster" "whoogle_ecs_cluster" {
   name = "whoogle-ecs-cluster"
 }
 
+#====================================================
+# ECS Task Definition
+#====================================================
 resource "aws_ecs_task_definition" "whoogle_ecs_task" {
   family = "whoogle-ecs-task-family"
   cpu    = 512
   memory = 1024
   container_definitions = jsonencode([{
-    name  = "whoogle"
-    image = "benbusby/whoogle-search:latest"
-    # image     = "nginx:latest"
+    name      = "whoogle"
+    image     = "benbusby/whoogle-search:latest"
     essential = true
     portMappings = [{
       containerPort = var.container_port
@@ -19,6 +24,9 @@ resource "aws_ecs_task_definition" "whoogle_ecs_task" {
   network_mode             = "awsvpc"
 }
 
+#====================================================
+# ECS Service
+#====================================================
 resource "aws_ecs_service" "whoogle_ecs_service" {
   name            = "whoogle-ecs-service"
   cluster         = aws_ecs_cluster.whoogle_ecs_cluster.id

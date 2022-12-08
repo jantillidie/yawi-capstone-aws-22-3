@@ -1,3 +1,6 @@
+#====================================================
+# Autoscaling
+#====================================================
 resource "aws_appautoscaling_target" "ecs_target" {
   min_capacity       = 3
   max_capacity       = 5
@@ -6,6 +9,9 @@ resource "aws_appautoscaling_target" "ecs_target" {
   service_namespace  = "ecs"
 }
 
+#====================================================
+# Autoscaling Policies
+#====================================================
 resource "aws_appautoscaling_policy" "appautoscaling_policy_cpu" {
   name               = "application-scale-policy-cpu"
   policy_type        = "TargetTrackingScaling"
