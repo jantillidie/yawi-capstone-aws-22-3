@@ -42,12 +42,3 @@ variable "cert_domain" {
   type        = string
   default     = "whoogledev.site"
 }
-
-#====================================================
-# SNS E-Mail
-#====================================================
-variable "sns_email" {
-  description = "E-Mail for SNS Cloudwatch Alarms"
-  type        = string
-  sensitive   = true
-}
