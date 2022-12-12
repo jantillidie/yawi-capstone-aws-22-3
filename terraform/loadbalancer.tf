@@ -35,30 +35,43 @@ resource "aws_lb_listener" "http_listener" {
 
   depends_on = [aws_lb_target_group.whoogle_api]
 
-  default_action {
-    type = "redirect"
-    redirect {
-      port        = "443"
-      protocol    = "HTTPS"
-      status_code = "HTTP_301"
-    }
-  }
-}
+  # ====================================================
+  # Redirect to https port 443
+  # Uncomment this after setting ns records for domain
+  # ====================================================
+  # default_action {
+  #   type = "redirect"
+  #   redirect {
+  #     port        = "443"
+  #     protocol    = "HTTPS"
+  #     status_code = "HTTP_301"
+  #   }
+  # }
 
-#====================================================
-# ALB Listener for https port 443
-#====================================================
-resource "aws_lb_listener" "whoogle_https" {
-  load_balancer_arn = aws_lb.whoogle_alb.id
-  port              = "443"
-  protocol          = "HTTPS"
-  ssl_policy        = "ELBSecurityPolicy-2016-08"
-  depends_on        = [aws_lb_target_group.whoogle_api]
-
+  # ====================================================
+  # Comment this out after setting ns records for domain
+  # ====================================================
   default_action {
     type             = "forward"
     target_group_arn = aws_lb_target_group.whoogle_api.arn
   }
-
-  certificate_arn = aws_acm_certificate_validation.whoogle_site.certificate_arn
 }
+
+# ====================================================
+# ALB Listener for https port 443
+# Uncomment this after setting ns records for domain
+# ====================================================
+# resource "aws_lb_listener" "whoogle_https" {
+#   load_balancer_arn = aws_lb.whoogle_alb.id
+#   port              = "443"
+#   protocol          = "HTTPS"
+#   ssl_policy        = "ELBSecurityPolicy-2016-08"
+#   depends_on        = [aws_lb_target_group.whoogle_api]
+
+#   default_action {
+#     type             = "forward"
+#     target_group_arn = aws_lb_target_group.whoogle_api.arn
+#   }
+
+#   certificate_arn = aws_acm_certificate_validation.whoogle_site.certificate_arn
+# }
