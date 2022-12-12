@@ -1,4 +1,22 @@
 #====================================================
+# Region
+#====================================================
+variable "region" {
+  description = "Region"
+  type        = string
+  default     = "us-east-1"
+}
+
+#====================================================
+# TF State Bucket name
+#====================================================
+variable "state_bucket_name" {
+  description = "TF State Bucket name"
+  type        = string
+  default     = "yawi-tfstate-bucket-aws223"
+}
+
+#====================================================
 # Whoogle Container
 #====================================================
 variable "container_port" {

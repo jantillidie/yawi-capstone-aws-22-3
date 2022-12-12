@@ -9,7 +9,7 @@ Get Google search results, but without any ads, javascript, AMP links, cookies, 
 
 This is the infrastructure for a Whoogle Search Instance to learn autoscaling and testing AWS Infrastructure
 
-**Tools** (so far)
+**Tools**
 - Docker
 - Git
 - Github Actions
@@ -27,6 +27,10 @@ This is the infrastructure for a Whoogle Search Instance to learn autoscaling an
 #### Infrastructure 2022-12-06
 
 ![inrastucture](pics/refactor-to-ecs.png)
+
+#### Infrastructure 2022-12-12
+
+![inrastucture](pics/ecs-tls-infra.png)
 
 ##### Result:
 
