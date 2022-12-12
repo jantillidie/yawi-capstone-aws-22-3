@@ -20,8 +20,6 @@ This is the infrastructure for a Whoogle Search Instance to learn autoscaling an
   - ECS Fargate
   - Route 53
   - AWS Certificate Manager
-  - CloudWatch
-  - SNS
 - Stress Tests
   - [cypress](https://www.cypress.io/)
 

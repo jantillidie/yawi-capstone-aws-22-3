@@ -3,10 +3,6 @@
 #====================================================
 resource "aws_ecs_cluster" "whoogle_ecs_cluster" {
   name = "whoogle-ecs-cluster"
-  setting {
-    name  = "containerInsights"
-    value = "enabled"
-  }
 }
 
 #====================================================
