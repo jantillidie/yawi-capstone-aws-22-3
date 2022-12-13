@@ -42,3 +42,12 @@ variable "cert_domain" {
   type        = string
   default     = "whoogledev.site"
 }
+
+#====================================================
+# SNS E-Mail
+#====================================================
+variable "sns_email" {
+  description = "SNS E-Mail"
+  type        = string
+  default     = "jan.m@tuta.io"
+}
