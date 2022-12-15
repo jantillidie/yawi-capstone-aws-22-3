@@ -1,3 +1,6 @@
+#====================================================
+# S3 bucket for terraform state
+#====================================================
 resource "aws_s3_bucket" "terraform_state" {
   bucket        = var.state_bucket_name
   force_destroy = true
@@ -19,6 +22,9 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "terraform_state_c
   }
 }
 
+#====================================================
+# DynamoDB Table for terraform state locking
+#====================================================
 resource "aws_dynamodb_table" "terraform_locks" {
   name         = "terraform-state-locking"
   billing_mode = "PAY_PER_REQUEST"
