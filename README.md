@@ -41,8 +41,15 @@ set up DNS and TLS with Route 53 and AWS Certificate Manager.
 #### How to:
 
 After the first run uncomment the following parts:
+
 **terraform/route53.tf** from line 12
-**terraform/loadbalancer.tf** line 42 to 49 and line 64 to line 77 and comment out line 54 to 57
+
+**terraform/loadbalancer.tf** line 42 to 49
+
+and line 64 to line 77
+
+and comment out line 54 to 57
+
 **terraform/providers.tf** line 6 to 12
 
 Get the NS Records from Route 53 Hosted Zones and apply
