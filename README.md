@@ -22,8 +22,10 @@ This is the infrastructure for a Whoogle Search Instance to learn autoscaling an
   - AWS Certificate Manager
   - Cloudwatch
   - SNS
-- Stress Tests
-  - [cypress](https://www.cypress.io/)
+
+#### Final Infrastructure simplyfied
+
+![infrastructure](pics/ecs-tls-infra-simplified.png)
 
 
 #### Infrastructure 2022-12-06
